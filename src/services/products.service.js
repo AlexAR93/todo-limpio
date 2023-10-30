@@ -1,4 +1,4 @@
-import { ProductModel } from "../models/products.model.js";
+import { ProductModel } from "../DAO/models/products.model.js";
 
 class ProductsService{
     async toGetProducts(){

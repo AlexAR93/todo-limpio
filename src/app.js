@@ -1,7 +1,7 @@
 import express from "express";
 import productsRouter from "./routers/products.router.js";
 import { connectMongo } from "./utils/connect-mongo.js";
-import loginRouter from "./routers/auth.js";
+import authRouter from "./routers/auth.js";
 import handlebars from 'express-handlebars';
 import __dirname from "./utils/__dirname.js";
 import path from 'path';
@@ -42,7 +42,12 @@ app.set('view engine', 'handlebars');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/products',productsRouter);
-app.use("/api/sessions",loginRouter);
+app.use("/api/sessions",authRouter);
+
+
+app.get("/",(req,res)=>{
+  res.render('home')
+});
 
 
 app.get('*',(req,res)=>{

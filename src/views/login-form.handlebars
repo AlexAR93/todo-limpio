@@ -1,7 +1,17 @@
-<form action="/auth/login" method="POST">
-    <input type="text" id="email" name="email" placeholder="email"/>
-    <input type="number" id="password" name="password" placeholder="password"/>
-    <input type="submit" value="login"/>
-</form>
-<a href="/api/sessions/register">Register you</a>
-<a href="/api/sessions/github">Github</a>
+<div class="bg-image">
+    <div class="login-container">
+        <form action="/api/sessions/login" method="POST">
+            <input type="text" id="email" name="email" placeholder="email" class="input-style"/>
+            <input type="password" id="password" name="password" placeholder="password" class="input-style"/>
+            <input type="submit" value="login" class="login-btn"/>
+        </form>
+        <div class="other-methods">
+            <a href="/api/sessions/github">
+                <i class="fa-brands fa-github github-icon"></i>
+            </a>
+        </div>
+        <div class="register">
+            <a href="/api/sessions/register">Register you</a>
+        </div>
+    </div>
+</div>

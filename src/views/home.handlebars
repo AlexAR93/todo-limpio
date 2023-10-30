@@ -1,0 +1,31 @@
+<div class="bg-image">
+    <div class="home-container">
+        <div class="logo">
+             <a href='/'>
+                <img src='/images/logo.png' alt='logo' />
+            </a>
+        </div>
+        <h2 class="card-tittle">Productos de Limpieza</h2>
+        {{#if firstName}}
+        <div>
+            <div>
+                <h4>Bienvenido,
+                    {{firstName}}. Tu Rol es
+                    {{rol}}</h4>
+                <a href='/api/sessions/logout'>
+                    <i>Logout</i>
+                </a>
+            </div>
+        </div>
+        {{else}}
+        <div class="sessions-btn">
+            <a href='/api/sessions/login'>
+                <i>Iniciar Sesión</i>
+            </a>
+            <a href='/api/sessions/register'>
+                <i>Registrarse</i>
+            </a>
+        </div>
+        {{/if}}
+    </div>
+</div>

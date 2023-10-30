@@ -1,9 +1,13 @@
-<form action="/auth/register" method="POST">
-    <input type="text" id="first_name" name="first_name" placeholder="first_name"/>
-    <input type="text" id="last_name" name="last_name" placeholder="last_name"/>
-    <input type="text" id="email" name="email" placeholder="email"/>
-    <input type="number" id="age" name="age" placeholder="age"/>
-    <input type="text" id="password" name="password" placeholder="password"/>
-    <input type="submit" value="registrar"/>
-</form>
-<a href="/auth/login">Ya tengo cuenta</a>
+<div class="bg-image">
+    <div class="register-container">
+        <form action="/api/sessions/register" method="POST">
+            <input class="input-style" type="text" id="first_name" name="first_name" placeholder="first_name"/>
+            <input class="input-style" type="text" id="last_name" name="last_name" placeholder="last_name"/>
+            <input class="input-style" type="text" id="email" name="email" placeholder="email"/>
+            <input class="input-style" type="number" id="age" name="age" placeholder="age"/>
+            <input class="input-style" type="password" id="password" name="password" placeholder="password"/>
+            <input class="register-btn" type="submit" value="registrar"/>
+        </form>
+        <a href="/api/sessions/login" class="login">Ya tengo cuenta</a>
+    </div>
+</div>

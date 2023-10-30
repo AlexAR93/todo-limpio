@@ -1,7 +1,7 @@
 import passport from 'passport';
 import local from 'passport-local';
 import { createHash, isValidPassword } from '../utils/hashPassword.js';
-import { UserModel } from '../models/users.model.js';
+import { UserModel } from '../DAO/models/users.model.js';
 import fetch from 'node-fetch';
 import GitHubStrategy from 'passport-github2';
 const LocalStrategy = local.Strategy;
@@ -69,7 +69,7 @@ export function iniPassport() {
           },
           async (req, username, password, done) => {
             try {
-              const { first_name,last_name,email,age,password } = req.body;
+              const { first_name,last_name,age} = req.body;
               let user = await UserModel.findOne({ email: username });
               if (user) {
                 console.log('User already exists');
@@ -80,7 +80,7 @@ export function iniPassport() {
                 firstName:first_name,
                 lastName:last_name,
                 password:createHash(password),
-                email,
+                email:username,
                 age,
                 admin:false
               };

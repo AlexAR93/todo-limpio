@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+.bg-image {
+	background-image: url("/images/clear-products.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.home-container{
+	background: #fff;
+	border-radius: 30px;
+	width: fit-content;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	padding: 2em 1em;
+}
+.card-tittle{
+	font-size: 1rem;
+	font-weight: 200;
+	text-transform: uppercase;
+}
+.logo{
+	border: 1px solid #000;
+	border-radius: 30%;
+	overflow: hidden;
+	width: 200px;
+}
+.home-container a img{
+	width: 100%;
+}
+
+
+.sessions-btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.sessions-btn a{
+	text-decoration: none;
+	color: #fff;
+	padding: 1rem;
+	background: #08f;
+	border-radius: 50px;
+}
+.sessions-btn a:active{
+	transition: all .2s;
+	transform: scale(0.9);
+}
+
+
+/* LOGIN STYLES */
+
+.login-container{
+	background: #fff;
+	border-radius: 30px;
+	width: fit-content;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2em 1em;
+}
+.login-container form{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.login-container form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.login-btn{
+	background: #08f;
+	border: none;
+	border-radius: 30px;
+	padding: 10px;
+	cursor: pointer;
+	color: #fff;
+}
+.input-style{
+	border: 1px solid #777;
+	border-radius: 30px;
+	height: 40px;
+	padding-left: 10px;
+}
+.github-icon{
+	font-size: 40px;
+	padding: 10px 0;
+}
+.register:hover,.login:hover,.github-icon:hover{
+	color: #08f;
+}
+
+
+/* Register styles */
+
+.register-container{
+	background: #fff;
+	border-radius: 30px;
+	width: fit-content;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2em 1em;
+}
+.register-container form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.register-btn{
+	background: #08f;
+	border: none;
+	border-radius: 30px;
+	padding: 10px;
+	cursor: pointer;
+	color: #fff;
+}
